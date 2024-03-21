@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Laminas\Captcha;
 
-use Laminas\ReCaptcha\RecaptchaServiceInterface;
+use Laminas\ReCaptcha\ReCaptchaServiceInterface;
 
 use function array_key_exists;
 use function is_array;
@@ -23,7 +23,7 @@ class ReCaptcha extends AbstractAdapter
     /**
      * Recaptcha service object
      *
-     * @var RecaptchaServiceInterface
+     * @var ReCaptchaServiceInterface
      */
     protected $service;
 
@@ -192,7 +192,7 @@ class ReCaptcha extends AbstractAdapter
      *
      * @return ReCaptcha Provides a fluent interface
      */
-    public function setService(RecaptchaServiceInterface $service)
+    public function setService(ReCaptchaServiceInterface $service)
     {
         $this->service = $service;
         return $this;
@@ -201,7 +201,7 @@ class ReCaptcha extends AbstractAdapter
     /**
      * Retrieve ReCaptcha service object
      *
-     * @return RecaptchaServiceInterface
+     * @return ReCaptchaServiceInterface
      */
     public function getService()
     {
